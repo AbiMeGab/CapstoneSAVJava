@@ -1,13 +1,14 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class AlgoritmoBase {
-    public String[] arrayDesordenado;
-    public String pivote;
-    public String apuntador;
 
-    public void setArrayDesordenado(String[] arrayDesordenado) {
-        this.arrayDesordenado = arrayDesordenado;
+    List<Object> list = new ArrayList<>();
+    public AlgoritmoBase(List<Object> list){
+
+        this.list = list;
     }
-
     public abstract void ordenar();
 
-   // public abstract void mostrarArrayOrdenado();
 }
+

@@ -1,42 +1,25 @@
-import java.util.Scanner;
-
-
 public class Main {
     public static void main(String[] args) {
-        Scanner arrayNuevo = new Scanner(System.in);
-        System.out.print("Ingresa tu arreglo, separando cada elemento por comas: ");
-        String input = arrayNuevo.nextLine();
+        try {
+            if (args.length != 6) {
+                System.out.println("Debes proporcionar 6 argumentos: alg, tip, ord, ent, arr y vel");
+                return;
+            }
 
-        String[] elementos = input.split(",");
-        for (int i = 0; i < elementos.length; i++) {
-            elementos[i] = elementos[i].trim();
+            String alg = args[0].split("=")[1];
+            String tip = args[1].split("=")[1];
+            String ord = args[2].split("=")[1];
+            String ent = args[3].split("=")[1];
+            String arr = args[4].split("=")[1];
+            String vel = args[5].split("=")[1];
+
+            VerificarDatos verificarDatos = new VerificarDatos(alg, tip, ord, ent, arr, vel);
+
+            OrdenamientoBurbuja ordenamientoBurbuja = new OrdenamientoBurbuja(verificarDatos.getArreglo());
+            ordenamientoBurbuja.ordenar();
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+            e.printStackTrace();
         }
-        OrdenamientoBurbuja ordenarArrayBurbuja = new OrdenamientoBurbuja();
-
-        ordenarArrayBurbuja.setArrayDesordenado(elementos);
-        ordenarArrayBurbuja.ordenar();
-
-
-        System.out.println("""
-                \n
-                ***********************************************
-                   EJEMPLOS DE OUTPUT DADOS EN LA ASIGNACIÓN:
-                ***********************************************
-                """);
-
-        // Ejemplo 1: Números
-        ordenarArrayBurbuja.setArrayDesordenado(new String[]{"0","-1","3","1","10"});
-        System.out.println("\nEjemplo 1:");
-        ordenarArrayBurbuja.ordenar();
-
-        // Ejemplo 2: Letras
-        ordenarArrayBurbuja.setArrayDesordenado(new String[]{"z", "a", "Z", "A", "b"});
-        System.out.println("\nEjemplo 2:");
-        ordenarArrayBurbuja.ordenar();
-
-        // Ejemplo 3: Números y Letras (inválido)
-        ordenarArrayBurbuja.setArrayDesordenado(new String[]{"z", "1", "Z", "A", "b"});
-        System.out.println("\nEjemplo 3:");
-        ordenarArrayBurbuja.ordenar();
     }
 }
