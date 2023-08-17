@@ -1,16 +1,26 @@
 classDiagram
     class AlgoritmoBase {
-        + arrayDesordenado: String[]
-        + pivote: String
-        + apuntador: String
-        + setArrayDesordenado(arrayDesordenado: String[]): void
-        + ordenar(): void
+        + list: List<Object>
+        + AlgoritmoBase(list: List<Object>)
+        + abstract ordenar(): void
     }
 
     class OrdenamientoBurbuja {
-        + esNumero(elemento: String): boolean
-        + ordenarNumeros(elementos: String[]): void
-        + ordenarLetras(elementos: String[]): void
+        + compareElements(element1: Object, element2: Object): int
+        + OrdenamientoBurbuja(list: List<Object>)
+        + ordenar(): void
+    }
+
+    class OrdenamientoDeInsercion {
+        + OrdenamientoDeInsercion(list: List<Object>)
+        + ordenar(): void
+    }
+
+    class OrdenamientoDeSeleccion {
+        + OrdenamientoDeSeleccion(list: List<Object>)
+        + ordenar(): void
     }
 
     AlgoritmoBase <|-- OrdenamientoBurbuja
+    AlgoritmoBase <|-- OrdenamientoDeInsercion
+    AlgoritmoBase <|-- OrdenamientoDeSeleccion

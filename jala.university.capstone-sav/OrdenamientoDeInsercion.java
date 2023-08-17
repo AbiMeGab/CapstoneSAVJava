@@ -1,37 +1,31 @@
 import java.util.List;
 
-public class OrdenamientoBurbuja extends AlgoritmoBase {
+public class OrdenamientoDeInsercion extends AlgoritmoBase {
 
-
-    public OrdenamientoBurbuja(List<Object> list) {
+    public OrdenamientoDeInsercion(List<Object> list) {
         super(list);
     }
 
     @Override
     public void ordenar() {
-        for (int index = 0; index < this.list.size() - 1; index++) {
-            boolean swapped = false;
-            for (int pointer = 0; pointer < list.size() - index - 1; pointer++) {
-                Object element1 = this.list.get(pointer);
-                Object element2 = this.list.get(pointer + 1);
+        for (int index = 1; index < this.list.size(); index++) {
+            Object currentElement = this.list.get(index);
+            int pointer = index - 1;
 
-                if (compareElements(element1, element2) > 0) {
-                    this.list.set(pointer, element2);
-                    this.list.set(pointer + 1, element1);
-                    swapped = true;
-                }
+            while (pointer >= 0 && compareElements(this.list.get(pointer), currentElement) > 0) {
+                this.list.set(pointer + 1, this.list.get(pointer));
+                pointer--;
             }
 
-            if (!swapped) {
-                break;
-            }
+            this.list.set(pointer + 1, currentElement);
 
             System.out.println(list);
         }
 
         System.out.println();
     }
-    private int compareElements(Object element1, Object element2) throws IllegalArgumentException {
+
+    private int compareElements(Object element1, Object element2) {
         if (element1 instanceof Integer && element2 instanceof Integer) {
             int comparisonResult = Integer.compare((Integer) element1, (Integer) element2);
             return comparisonResult;
