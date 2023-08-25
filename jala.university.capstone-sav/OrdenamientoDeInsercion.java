@@ -1,9 +1,11 @@
+import java.util.Collections;
 import java.util.List;
 
 public class OrdenamientoDeInsercion extends AlgoritmoBase {
+    private String ord;
 
-    public OrdenamientoDeInsercion(List<Object> list) {
-        super(list);
+    public OrdenamientoDeInsercion(List<Object> list, String ord) {
+        super(list); this.ord = ord;
     }
 
     @Override
@@ -16,13 +18,15 @@ public class OrdenamientoDeInsercion extends AlgoritmoBase {
                 this.list.set(pointer + 1, this.list.get(pointer));
                 pointer--;
             }
-
             this.list.set(pointer + 1, currentElement);
-
-            System.out.println(list);
         }
-
-        System.out.println();
+            if ("az".equalsIgnoreCase(ord)){
+             System.out.println("Ordenamiento: " + list);
+              } else if ("za".equalsIgnoreCase(ord)) {
+                 Collections.reverse(this.list);
+                 System.out.println("Ordenamiento: " + list);
+        }
+        System.out.println("Algoritmo: Ordenamiento de Inserción");
     }
 
     private int compareElements(Object element1, Object element2) {

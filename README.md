@@ -22,6 +22,12 @@ Los algortimos que presenta mi proyecto son:
 
 ![img.png](img.png)
 
+![img_1.png](img_1.png)
+
+![img_2.png](img_2.png)
+
+
+
 Los parámetros entran por la terminal del sistema.
 
 ***

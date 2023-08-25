@@ -1,10 +1,10 @@
+import java.util.Collections;
 import java.util.List;
 
 public class OrdenamientoBurbuja extends AlgoritmoBase {
-
-
-    public OrdenamientoBurbuja(List<Object> list) {
-        super(list);
+    private String ord;
+    public OrdenamientoBurbuja(List<Object> list, String ord) {
+        super(list); this.ord = ord;
     }
 
     @Override
@@ -21,15 +21,17 @@ public class OrdenamientoBurbuja extends AlgoritmoBase {
                     swapped = true;
                 }
             }
-
             if (!swapped) {
                 break;
             }
-
-            System.out.println(list);
         }
-
-        System.out.println();
+        if ("az".equalsIgnoreCase(ord)){
+            System.out.println("Ordenamiento: " + list);
+        } else if ("za".equalsIgnoreCase(ord)) {
+            Collections.reverse(this.list);
+            System.out.println("Ordenamiento: " + list);
+        }
+        System.out.println("Algoritmo: Ordenamiento Burbuja");
     }
     private int compareElements(Object element1, Object element2) throws IllegalArgumentException {
         if (element1 instanceof Integer && element2 instanceof Integer) {

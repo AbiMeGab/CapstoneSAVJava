@@ -1,32 +1,36 @@
+import java.util.Collections;
 import java.util.List;
 
 public class OrdenamientoDeSeleccion extends AlgoritmoBase {
-
-    public OrdenamientoDeSeleccion(List<Object> list) {
-        super(list);
+    private String ord;
+    public OrdenamientoDeSeleccion(List<Object> list, String ord) {
+        super(list); this.ord = ord;
     }
 
     @Override
     public void ordenar() {
-        for (int i = 0; i < this.list.size() - 1; i++) {
-            int minIndex = i;
+        for (int index = 0; index < this.list.size() - 1; index++) {
+            int minIndex = index;
 
-            for (int j = i + 1; j < this.list.size(); j++) {
-                if (compareElements(this.list.get(j), this.list.get(minIndex)) < 0) {
-                    minIndex = j;
+            for (int pointer = index + 1; pointer < this.list.size(); pointer++) {
+                if (compareElements(this.list.get(pointer), this.list.get(minIndex)) < 0) {
+                    minIndex = pointer;
                 }
             }
 
-            if (minIndex != i) {
-                Object temp = this.list.get(i);
-                this.list.set(i, this.list.get(minIndex));
+            if (minIndex != index) {
+                Object temp = this.list.get(index);
+                this.list.set(index, this.list.get(minIndex));
                 this.list.set(minIndex, temp);
             }
-
-            System.out.println(list);
         }
-
-        System.out.println();
+        if ("az".equalsIgnoreCase(ord)){
+            System.out.println("Ordenamiento: " + list);
+        } else if ("za".equalsIgnoreCase(ord)) {
+            Collections.reverse(this.list);
+            System.out.println("Ordenamiento: " + list);
+        }
+        System.out.println("Algoritmo: Ordenamiento de Selección");
     }
 
     private int compareElements(Object element1, Object element2) {
