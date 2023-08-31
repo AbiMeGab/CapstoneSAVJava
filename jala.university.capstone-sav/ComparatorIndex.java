@@ -10,4 +10,9 @@ public class ComparatorIndex {
     public int getValue() {
         return value;
     }
+
+    @Override
+    public String toString() {
+        return key;
+    }
 }
