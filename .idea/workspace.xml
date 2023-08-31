@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="be8244c3-610a-4ef6-89e4-c6c04aca3079" name="Changes" comment="Salidas mejoradas">
+      <change afterPath="$PROJECT_DIR$/jala.university.capstone-sav/BaseAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jala.university.capstone-sav/BubbleSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jala.university.capstone-sav/ComparatorIndex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jala.university.capstone-sav/DataVerifier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jala.university.capstone-sav/InsertionSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jala.university.capstone-sav/RandomGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jala.university.capstone-sav/SelectionSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jala.university.capstone-sav/AlgoritmoBase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jala.university.capstone-sav/OrdenamientoBurbuja.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jala.university.capstone-sav/OrdenamientoDeInsercion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jala.university.capstone-sav/OrdenamientoDeSeleccion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jala.university.capstone-sav/SAV.java" beforeDir="false" afterPath="$PROJECT_DIR$/jala.university.capstone-sav/SAV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jala.university.capstone-sav/VerificadorDeDatos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jala.university.capstone-sav/diagrama.mermaid" beforeDir="false" afterPath="$PROJECT_DIR$/jala.university.capstone-sav/diagrama.mermaid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/SAVTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/SAVTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="JUnit3 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectId" id="2TJnEJdJrJpOomLjPrYkSIlX0KO" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ToolWindowRun.ShowToolbar": "false",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit3",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3": "junit.framework.TestCase",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "deletionFromPopupRequiresConfirmation": "false",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_directory_selection": "C:/Users/abbyb/OneDrive/Escritorio/capstone-savb/jala.university.capstone-sav",
+    "last_opened_file_path": "C:/Users/abbyb/OneDrive/Escritorio/labarberia",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\abbyb\OneDrive\Escritorio\capstone-sav" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="junit.framework.TestCase" />
+      <recent name="" />
+    </key>
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="array" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.SAVTest.testEntradaRandom">
+    <configuration name="SAVTest.testEntradaInvalida (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="capstone-savb" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SAVTest" />
+      <option name="METHOD_NAME" value="testEntradaInvalida" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SAVTest.testEntradaLetras" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="capstone-savb" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SAVTest" />
+      <option name="METHOD_NAME" value="testEntradaLetras" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SAVTest.testEntradaLetrasReverso (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="capstone-savb" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SAVTest" />
+      <option name="METHOD_NAME" value="testEntradaLetrasReverso" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SAVTest.testEntradaLetrasReverso" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SAVTest" />
+      <option name="METHOD_NAME" value="testEntradaLetrasReverso" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SAVTest.testEntradaNumeros (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="capstone-savb" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SAVTest" />
+      <option name="METHOD_NAME" value="testEntradaNumeros" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SAVTest.testEntradaRandom" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="capstone-savb" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SAVTest" />
+      <option name="METHOD_NAME" value="testEntradaRandom" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.SAVTest.testEntradaLetrasReverso" />
+      <item itemvalue="JUnit.SAVTest.testEntradaInvalida (1)" />
+      <item itemvalue="JUnit.SAVTest.testEntradaRandom" />
+      <item itemvalue="JUnit.SAVTest.testEntradaLetras" />
+      <item itemvalue="JUnit.SAVTest.testEntradaLetrasReverso (1)" />
+      <item itemvalue="JUnit.SAVTest.testEntradaNumeros (1)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SAVTest.testEntradaRandom" />
+        <item itemvalue="JUnit.SAVTest.testEntradaInvalida (1)" />
+        <item itemvalue="JUnit.SAVTest.testEntradaLetras" />
+        <item itemvalue="JUnit.SAVTest.testEntradaNumeros (1)" />
+        <item itemvalue="JUnit.SAVTest.testEntradaLetrasReverso (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="be8244c3-610a-4ef6-89e4-c6c04aca3079" name="Changes" comment="" />
+      <created>1690769938652</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1690769938652</updated>
+      <workItem from="1691198063077" duration="659000" />
+      <workItem from="1691198740075" duration="150000" />
+    </task>
+    <task id="LOCAL-00001" summary="Subiendo últimos cambios, asignación completada">
+      <created>1690780485192</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1690780485192</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Diagrama de clases añadido">
+      <created>1690780676849</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1690780676849</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Algoritmos y mejoras añadidas">
+      <created>1692241343629</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1692241343629</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Salidas mejoradas">
+      <created>1692930715783</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1692930715783</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="sav" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Subiendo últimos cambios, asignación completada" />
+    <MESSAGE value="Diagrama de clases añadido" />
+    <MESSAGE value="Algoritmos y mejoras añadidas" />
+    <MESSAGE value="Salidas mejoradas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Salidas mejoradas" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/jala.university.capstone-sav/DataVerifier.java</url>
+          <line>107</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

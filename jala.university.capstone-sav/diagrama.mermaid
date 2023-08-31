@@ -1,26 +1,61 @@
 classDiagram
-    class AlgoritmoBase {
-        + list: List<Object>
-        + AlgoritmoBase(list: List<Object>)
-        + abstract ordenar(): void
+    class BaseAlgorithm {
+        +List<IndiceComparador> list
+        +BaseAlgorithm(list: List<IndiceComparador>)
+        +sort(): void
     }
 
-    class OrdenamientoBurbuja {
-        + compareElements(element1: Object, element2: Object): int
-        + OrdenamientoBurbuja(list: List<Object>)
-        + ordenar(): void
+    class ComparatorIndex {
+        +int value
+        +String key
+        +ComparatorIndex(value: int, key: String)
+        +getValue(): int
     }
 
-    class OrdenamientoDeInsercion {
-        + OrdenamientoDeInsercion(list: List<Object>)
-        + ordenar(): void
-    }
+    class DataVerifier {
++String algorithm
++String type
++String ordering
++String entry
++String array
++static String printSpeed
++int speed
++List<ComparatorIndex> arrayListComparator
++DataVerifier(algorithm: String, type: String, order: String, entry: String, array: String, velocity: String)
++validateAlgorithm(entrada: String, op1: String, op2: String, op3: String): String
++validateType(entrada: String, op1: String, op2: String): String
++validateOrder(entrada: String, op1: String, op2: String, op3: String, op4: String): String
++validateEntry(entrada: String, op1: String, op2: String): String
++validateSpeed(entrada: String, valorMax: int, valorMin: int): int
++runArray(): void
++rellenarArreglo(): void
++getAlg(): String
++getVerfiedArray(): List<ComparatorIndex>
+}
 
-    class OrdenamientoDeSeleccion {
-        + OrdenamientoDeSeleccion(list: List<Object>)
-        + ordenar(): void
-    }
+class BubbleSort {
++String ord
++String speed
++BubbleSort(list: List<ComparatorIndex>, ord: String, speed: String)
++sort(): void
+}
 
-    AlgoritmoBase <|-- OrdenamientoBurbuja
-    AlgoritmoBase <|-- OrdenamientoDeInsercion
-    AlgoritmoBase <|-- OrdenamientoDeSeleccion
+class InsertionSort {
++String ord
++String speed
++InsertionSort(list: List<ComparatorIndex>, ord: String, speed: String)
++sort(): void
+}
+
+class SelectionSort {
++String speed
++String ord
++SelectionSort(list: List<ComparatorIndex>, ord: String, speed: String)
++sort(): void
+}
+
+BaseAlgorithm <|-- BubbleSort
+BaseAlgorithm <|-- InsertionSort
+BaseAlgorithm <|-- SelectionSort
+BaseAlgorithm *-- ComparatorIndex
+BaseAlgorithm *-- DataVerifier
