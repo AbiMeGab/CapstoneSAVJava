@@ -31,5 +31,5 @@ public class SAVTest {
     public void testEntradaRandom() {
         String[] args = {"a=b", "t=n", "o=az", "in=r", "v=\"1,q,5,8,X,4\"", "s=250"};
         SAV.main(args);
-    } //en construcción
+    }
 }

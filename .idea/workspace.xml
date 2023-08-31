@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be8244c3-610a-4ef6-89e4-c6c04aca3079" name="Changes" comment="Lab8 Activity #1">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="be8244c3-610a-4ef6-89e4-c6c04aca3079" name="Changes" comment="Lab8 Activity #1 *Devolví un toString() que borre sin querer." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,7 +94,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SAVTest.testEntradaNumeros (1)">
+  <component name="RunManager" selected="JUnit.SAVTest.testEntradaRandom">
     <configuration name="SAVTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="capstone-savb" />
       <option name="PACKAGE_NAME" value="" />
@@ -167,9 +165,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SAVTest.testEntradaRandom" />
         <item itemvalue="JUnit.SAVTest.testEntradaNumeros (1)" />
         <item itemvalue="JUnit.SAVTest" />
-        <item itemvalue="JUnit.SAVTest.testEntradaRandom" />
         <item itemvalue="JUnit.SAVTest.testEntradaInvalida (1)" />
         <item itemvalue="JUnit.SAVTest.testEntradaLetras" />
       </list>
@@ -221,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693453502091</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Lab8 Activity #1 *Devolví un toString() que borre sin querer.">
+      <created>1693454884031</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1693454884031</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,17 +261,23 @@
     <MESSAGE value="Algoritmos y mejoras añadidas" />
     <MESSAGE value="Salidas mejoradas" />
     <MESSAGE value="Lab8 Activity #1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lab8 Activity #1" />
+    <MESSAGE value="Lab8 Activity #1 *Devolví un toString() que borre sin querer." />
+    <option name="LAST_COMMIT_MESSAGE" value="Lab8 Activity #1 *Devolví un toString() que borre sin querer." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/jala.university.capstone-sav/DataVerifier.java</url>
-          <line>107</line>
-          <option name="timeStamp" value="37" />
+          <url>file://$PROJECT_DIR$/jala.university.capstone-sav/BubbleSort.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="this.list.get(10)" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
