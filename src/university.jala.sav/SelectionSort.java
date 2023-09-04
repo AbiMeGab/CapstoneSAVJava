@@ -17,7 +17,7 @@ public class SelectionSort extends BaseSortingAlgorithm {
     @Override
     public void sort() throws InterruptedException {
         long startTime = System.nanoTime();
-        int iteraciones = 0;
+        int iteration = 0;
         for (int index = 0; index < this.list.size() - 1; index++) {
             int minIndex = index;
 
@@ -35,11 +35,11 @@ public class SelectionSort extends BaseSortingAlgorithm {
                 this.list.set(index, this.list.get(minIndex));
                 this.list.set(minIndex, temp);
             }
-            iteraciones++;
-            ConsolePrinter.sortingList(iteraciones, list);
+            iteration++;
+            ConsolePrinter.sortingList(iteration, list);
             Thread.sleep(Long.parseLong(speed));
         }
-        ConsolePrinter.inverseConsolePrinter(orderingType, iteraciones, list);
+        ConsolePrinter.inverseConsolePrinter(orderingType, iteration, list);
         ConsolePrinter.printSortingType("Algoritmo: Ordenamiento de Selección");
 
         long endTime = System.nanoTime();

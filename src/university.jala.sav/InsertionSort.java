@@ -16,7 +16,7 @@ public class InsertionSort extends BaseSortingAlgorithm {
     @Override
     public void sort() throws InterruptedException {
         long startTime = System.nanoTime();
-        int iteraciones = 0;
+        int iteration = 0;
         for (int index = 1; index < this.list.size(); index++) {
             int pointer = index - 1;
 
@@ -27,11 +27,11 @@ public class InsertionSort extends BaseSortingAlgorithm {
                 pointer--;
             }
             this.list.set(pointer + 1, element2);
-            iteraciones++;
-            ConsolePrinter.sortingList(iteraciones, list);
+            iteration++;
+            ConsolePrinter.sortingList(iteration, list);
             Thread.sleep(Long.parseLong(speed));
         }
-        ConsolePrinter.inverseConsolePrinter(orderingType, iteraciones, list);
+        ConsolePrinter.inverseConsolePrinter(orderingType, iteration, list);
         ConsolePrinter.printSortingType("Algoritmo: Ordenamiento de Inserción");
 
         long endTime = System.nanoTime();

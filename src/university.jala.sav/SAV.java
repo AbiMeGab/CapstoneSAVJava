@@ -1,7 +1,5 @@
 package university.jala.sav;
 
-import sav.SavSettings;
-
 public class SAV {
     private static final String EQUAL = "=";
     private static final String BUBBLESORT = "b";

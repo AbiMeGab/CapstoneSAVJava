@@ -16,7 +16,7 @@ public class BubbleSort extends BaseSortingAlgorithm {
     @Override
     public void sort() throws InterruptedException {
         long startTime = System.nanoTime();
-        int iteraciones = 0;
+        int iteration = 0;
         for (int index = 0; index < this.list.size() - 1; index++) {
             boolean swapped = false;
             for (int pointer = 0; pointer < list.size() - index - 1; pointer++) {
@@ -32,11 +32,11 @@ public class BubbleSort extends BaseSortingAlgorithm {
             if (!swapped) {
                 break;
             }
-            iteraciones++;
-            ConsolePrinter.sortingList(iteraciones, list);
+            iteration++;
+            ConsolePrinter.sortingList(iteration, list);
             Thread.sleep(Long.parseLong(speed));
         }
-        ConsolePrinter.inverseConsolePrinter(orderingType, iteraciones, list);
+        ConsolePrinter.inverseConsolePrinter(orderingType, iteration, list);
         ConsolePrinter.printSortingType("Algoritmo: Ordenamiento Burbuja");
 
         long endTime = System.nanoTime();

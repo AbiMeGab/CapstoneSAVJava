@@ -4,35 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be8244c3-610a-4ef6-89e4-c6c04aca3079" name="Changes" comment="Min Fixes - Unused comments deleted">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sav.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/sav.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/university.jala.sav/ConsolePrinter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/university.jala.sav/SAV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/capstone-savb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/capstone-savb.iml" afterDir="false" />
+    <list default="true" id="be8244c3-610a-4ef6-89e4-c6c04aca3079" name="Changes" comment="Chore, updated refactorized code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jala.university.capstone-sav/BaseAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/university.jala.sav/BaseSortingAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jala.university.capstone-sav/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/university.jala.sav/BubbleSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jala.university.capstone-sav/ComparatorIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/university.jala.sav/ComparatorIndex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jala.university.capstone-sav/DataVerifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/university.jala.sav/DataVerifier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jala.university.capstone-sav/InsertionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/university.jala.sav/InsertionSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jala.university.capstone-sav/RandomGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/university.jala.sav/RandomGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jala.university.capstone-sav/SAV.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jala.university.capstone-sav/SelectionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/university.jala.sav/SelectionSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jala.university.capstone-sav/diagrama.mermaid" beforeDir="false" afterPath="$PROJECT_DIR$/src/university.jala.sav/diagrama.mermaid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/capstone-savb/AlgoritmoBase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/capstone-savb/DataVerifier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/capstone-savb/IndiceComparador.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/capstone-savb/OrdenamientoBurbuja.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/capstone-savb/OrdenamientoDeInsercion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/capstone-savb/OrdenamientoDeSeleccion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/capstone-savb/RandomGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/capstone-savb/SAV.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/capstone-savb/diagrama.mermaid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/capstone-savb/SAVTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/capstone-savb/SAVTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/SAVTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/SAVTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/sav.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/university.jala.sav/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/university.jala.sav/BubbleSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/university.jala.sav/DataVerifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/university.jala.sav/DataVerifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/university.jala.sav/InsertionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/university.jala.sav/InsertionSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/university.jala.sav/SAV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/university.jala.sav/SAV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/university.jala.sav/SelectionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/university.jala.sav/SelectionSort.java" afterDir="false" />
     </list>
+    <list id="a1736700-1164-4c53-b674-92118822ffee" name="Changes by ACER" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,7 +42,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2TJnEJdJrJpOomLjPrYkSIlX0KO" />
   <component name="ProjectLevelVcsManager">
@@ -127,22 +108,21 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SAVTest.testEntradaLetrasReverso (1)">
+  <component name="RunManager" selected="JUnit.SAVTest.testEntradaRandom">
+    <configuration name="SAVTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="capstone-savb" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SAVTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SAVTest.testEntradaInvalida" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="capstone-savb" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="SAVTest" />
       <option name="METHOD_NAME" value="testEntradaInvalida" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SAVTest.testEntradaLetras" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="capstone-savb" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SAVTest" />
-      <option name="METHOD_NAME" value="testEntradaLetras" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -169,7 +149,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SAVTest.testEntradaNumeros (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SAVTest.testEntradaNumeros" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="capstone-savb" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="SAVTest" />
@@ -193,16 +173,16 @@
       <item itemvalue="JUnit.SAVTest.testEntradaLetrasReverso" />
       <item itemvalue="JUnit.SAVTest.testEntradaInvalida" />
       <item itemvalue="JUnit.SAVTest.testEntradaLetrasReverso (1)" />
+      <item itemvalue="JUnit.SAVTest.testEntradaNumeros" />
+      <item itemvalue="JUnit.SAVTest" />
       <item itemvalue="JUnit.SAVTest.testEntradaRandom" />
-      <item itemvalue="JUnit.SAVTest.testEntradaLetras" />
-      <item itemvalue="JUnit.SAVTest.testEntradaNumeros (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SAVTest.testEntradaLetrasReverso (1)" />
-        <item itemvalue="JUnit.SAVTest.testEntradaLetras" />
         <item itemvalue="JUnit.SAVTest.testEntradaRandom" />
-        <item itemvalue="JUnit.SAVTest.testEntradaNumeros (1)" />
+        <item itemvalue="JUnit.SAVTest.testEntradaLetrasReverso (1)" />
+        <item itemvalue="JUnit.SAVTest" />
+        <item itemvalue="JUnit.SAVTest.testEntradaNumeros" />
         <item itemvalue="JUnit.SAVTest.testEntradaInvalida" />
       </list>
     </recent_temporary>
@@ -267,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693455300950</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Chore, updated refactorized code">
+      <created>1693798861368</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1693798861368</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,7 +291,8 @@
     <MESSAGE value="Lab8 Activity #1" />
     <MESSAGE value="Lab8 Activity #1 *Devolví un toString() que borre sin querer." />
     <MESSAGE value="Min Fixes - Unused comments deleted" />
-    <option name="LAST_COMMIT_MESSAGE" value="Min Fixes - Unused comments deleted" />
+    <MESSAGE value="Chore, updated refactorized code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chore, updated refactorized code" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
