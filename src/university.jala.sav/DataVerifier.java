@@ -1,3 +1,5 @@
+package university.jala.sav;
+
 import java.util.*;
 
 
@@ -5,74 +7,73 @@ import java.util.*;
 public class DataVerifier<T> {
     private String algorithm;
     private String type;
-    private String ordering;
+    private String orderingType;
     private String entry;
     private String array;
     private static String printSpeed;
     private int speed;
-    private static final char[] CARACTERES = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
-    private static final List<String> characters = Arrays.asList(Arrays.toString(CARACTERES));
+    private static final char[] CHARACTERS = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+    private static final List<String> characters = new ArrayList<>();
     List<ComparatorIndex> arrayListComparator;
+
+    private void fillCharacters() {
+        for (char character : CHARACTERS) {
+            characters.add(String.valueOf(character));
+        }
+    }
 
     public DataVerifier(String algorithm, String type, String order, String entry, String array, String velocity) {
         this.algorithm = algorithm;
         this.type = type;
-        this.ordering = order;
+        this.orderingType = order;
         this.entry = entry;
         this.array = array;
         this.printSpeed = velocity;
         this.arrayListComparator = new ArrayList<ComparatorIndex>();
+        fillCharacters();
         runArray();
     }
 
-    private String validateAlgorithm(String entrada, String op1, String op2, String op3) {
-        if (entrada.isBlank()) {
-            System.out.println("Error, no existe valor para selección de algoritmo.");
-            System.exit(0);
-        } else if (entrada.equals(op1) || entrada.equals(op2) || entrada.equals(op3)) {
-            return entrada;
+    private String validateAlgorithm(String input, String option1, String option2, String option3) {
+        if (input.isBlank()) {
+            ConsolePrinter.printError("Error, no existe valor para selección de algoritmo.");
+        } else if (input.equals(option1) || input.equals(option2) || input.equals(option3)) {
+            return input;
         } else {
-            System.out.println("Error, valor invalido para selección de algoritmo.");
-            System.exit(0);
+            ConsolePrinter.printError("Error, valor invalido para selección de algoritmo.");
         }
         return algorithm;
     }
 
-    private String validateType(String entrada, String op1, String op2) {
+    private String validateType(String entrada, String option1, String option2) {
         if (entrada.isBlank()) {
-            System.out.println("Error, falta valor para Tipo.");
-            System.exit(0);
-        } else if (entrada.equals(op1) || entrada.equals(op2)) {
+            ConsolePrinter.printError("Error, falta valor para Tipo.");
+        } else if (entrada.equals(option1) || entrada.equals(option2)) {
             return entrada;
         } else {
-            System.out.println("Error, Tipo no reconocido.");
-            System.exit(0);
+            ConsolePrinter.printError("Error, Tipo no reconocido.");
         }
         return type;
     }
 
-    private String validateOrder(String entrada, String op1, String op2, String op3, String op4) {
+    private String validateOrder(String entrada, String option1, String option2, String option3, String option4) {
         if (entrada.isBlank()) {
-            System.out.println("Error, falta tipo de ordenamiento.");
-            System.exit(0);
-        } else if (entrada.equals(op1) || entrada.equals(op2) || entrada.equals(op3) || entrada.equals(op4)) {
+            ConsolePrinter.printError("Error, falta tipo de ordenamiento.");
+        } else if (entrada.equals(option1) || entrada.equals(option2) || entrada.equals(option3) || entrada.equals(option4)) {
             return entrada;
         } else {
-            System.out.println("Error, tipo de ordenamiento no reconocido.");
-            System.exit(0);
+            ConsolePrinter.printError("Error, tipo de ordenamiento no reconocido.");
         }
-        return ordering;
+        return orderingType;
     }
 
-    private String validateEntry(String entrada, String op1, String op2) {
+    private String validateEntry(String entrada, String option1, String option2) {
         if (entrada.isBlank()) {
-            System.out.println("Error, falta tipo de entrada de valores.");
-            System.exit(0);
-        } else if (entrada.equalsIgnoreCase(op1) || entrada.equalsIgnoreCase(op2)) {
+            ConsolePrinter.printError("Error, falta tipo de entrada de valores.");
+        } else if (entrada.equalsIgnoreCase(option1) || entrada.equalsIgnoreCase(option2)) {
             return entrada;
         } else {
-            System.out.println("Error, Tipo de entrada de valores no valido.");
-            System.exit(0);
+            ConsolePrinter.printError("Error, Tipo de entrada de valores no valido.");
         }
         return entrada;
     }
@@ -92,13 +93,13 @@ public class DataVerifier<T> {
     private void runArray() {
         this.algorithm = validateAlgorithm(this.algorithm, "b", "i", "s");
         this.type = validateType(this.type, "n", "c");
-        this.ordering = validateOrder(this.ordering, "az", "za", "AZ", "ZA");
+        this.orderingType = validateOrder(this.orderingType, "az", "za", "AZ", "ZA");
         this.entry = validateEntry(this.entry, "r", "m");
-        rellenarArreglo();
+        fillArray();
         this.speed = validateSpeed(this.printSpeed, 1000, 100);
     }
 
-    private void rellenarArreglo() {
+    private void fillArray() {
         boolean hasNumbers = false;
         boolean hasLetters = false;
         if (this.entry.equalsIgnoreCase("m")) {
@@ -111,7 +112,7 @@ public class DataVerifier<T> {
                         ComparatorIndex comparatorIndexNumeros = new ComparatorIndex(value, trimmedElement);
                         arrayListComparator.add(comparatorIndexNumeros);
                         hasNumbers = true;
-                    } catch (Exception e) {
+                    } catch (NumberFormatException e) {
                         System.out.println("Tipo: [Numerico]");
                         System.out.println("Valores: " + "[" + array + "]");
                         System.out.println("Valores invalidos.");
@@ -120,7 +121,7 @@ public class DataVerifier<T> {
                 } else if (this.type.equals("c") || ((this.type.equals("c") && this.type.isBlank()))) {
                     try {
                         int value = characters.indexOf(trimmedElement);
-                        if (value == -1){
+                        if (value == -1) {
                             throw new Error("Tipo: [Caracter]" + "\n" + "Valores: " + "[" + array + "]" + "\n" + "Valores invalidos.");
                         }
                         ComparatorIndex comparatorIndexLetras = new ComparatorIndex(value, trimmedElement);
@@ -133,28 +134,41 @@ public class DataVerifier<T> {
                 }
             }
             if (hasNumbers) {
-                System.out.println("Tipo: [Numerico]");
+                ConsolePrinter.printTypeOfArray("Tipo: [Numerico]");
             } else if (hasLetters) {
-                System.out.println("Tipo: [Caracter]");
+                ConsolePrinter.printTypeOfArray("Tipo: [Caracter]");
             }
-        }
-        else if (this.entry.equals("r")) {
+        } else if (this.entry.equals("r")) {
             if (this.type.equals("c")) {
-                arrayListComparator = RandomGenerator.randomArregloCarac();
+                arrayListComparator = RandomGenerator.randomCharacters();
                 array = Arrays.toString(arrayListComparator.toArray());
             } else if (this.type.equals("n")) {
-                arrayListComparator = RandomGenerator.randomArregloNum();
+                arrayListComparator = RandomGenerator.randomNumbers();
                 array = Arrays.toString(arrayListComparator.toArray());
             }
         }
         System.out.println("Valores: " + "[" + array + "]");
     }
 
-    public String getAlg() {
+
+    public String getAlgorithm() {
         return algorithm;
     }
 
-    public List<ComparatorIndex> getVerfiedArray() {
+    public List<ComparatorIndex> getVerifiedArray() {
         return arrayListComparator;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        DataVerifier<?> that = (DataVerifier<?>) o;
+        return speed == that.speed && algorithm.equals(that.algorithm) && type.equals(that.type) && orderingType.equals(that.orderingType) && entry.equals(that.entry) && array.equals(that.array) && arrayListComparator.equals(that.arrayListComparator);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(algorithm, type, orderingType, entry, array, speed, arrayListComparator);
     }
 }

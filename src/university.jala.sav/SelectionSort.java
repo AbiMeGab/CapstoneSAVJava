@@ -1,16 +1,23 @@
+package university.jala.sav;
+
 import java.util.Collections;
 import java.util.List;
 
-public class SelectionSort extends BaseAlgorithm {
+public class SelectionSort extends BaseSortingAlgorithm {
     private final String speed;
-    private String ord;
-    public SelectionSort(List<ComparatorIndex> list, String ord, String speed) {
-        super(list); this.ord = ord; this.speed = speed;
+    private String orderingType;
+    private static final int NANOSECONDS = 1000000;
+
+    public SelectionSort(List<ComparatorIndex> list, String orderingType, String speed) {
+        super(list);
+        this.orderingType = orderingType;
+        this.speed = speed;
     }
 
     @Override
     public void sort() throws InterruptedException {
         long startTime = System.nanoTime();
+        int iteraciones = 0;
         for (int index = 0; index < this.list.size() - 1; index++) {
             int minIndex = index;
 
@@ -18,7 +25,7 @@ public class SelectionSort extends BaseAlgorithm {
                 ComparatorIndex element1 = this.list.get(pointer);
                 ComparatorIndex element2 = this.list.get(minIndex);
 
-                if (element1.getValue() < element2.getValue()){
+                if (element1.getValue() < element2.getValue()) {
                     minIndex = pointer;
                 }
             }
@@ -28,18 +35,16 @@ public class SelectionSort extends BaseAlgorithm {
                 this.list.set(index, this.list.get(minIndex));
                 this.list.set(minIndex, temp);
             }
+            iteraciones++;
+            ConsolePrinter.sortingList(iteraciones, list);
             Thread.sleep(Long.parseLong(speed));
         }
-        if ("az".equalsIgnoreCase(ord)){
-            System.out.println("Ordenamiento: " + list);
-        } else if ("za".equalsIgnoreCase(ord)) {
-            Collections.reverse(this.list);
-            System.out.println("Ordenamiento: " + list);
-        }
-        System.out.println("Algoritmo: Ordenamiento de Selección");
+        ConsolePrinter.inverseConsolePrinter(orderingType, iteraciones, list);
+        ConsolePrinter.printSortingType("Algoritmo: Ordenamiento de Selección");
 
         long endTime = System.nanoTime();
-        long timeElapsed = endTime - startTime;
-        System.out.println("Tiempo total: " + timeElapsed / 1000000 + " ms");
+        long timeElapsed = endTime - startTime - Long.parseLong(speed);
+
+        System.out.println("Tiempo total: " + timeElapsed / NANOSECONDS + " ms");
     }
 }

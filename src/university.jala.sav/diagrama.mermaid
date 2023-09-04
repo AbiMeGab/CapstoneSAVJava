@@ -1,7 +1,7 @@
 classDiagram
-    class BaseAlgorithm {
+    class BaseSortingAlgorithm {
         +List<IndiceComparador> list
-        +BaseAlgorithm(list: List<IndiceComparador>)
+        +BaseSortingAlgorithm(list: List<IndiceComparador>)
         +sort(): void
     }
 
@@ -54,8 +54,8 @@ class SelectionSort {
 +sort(): void
 }
 
-BaseAlgorithm <|-- BubbleSort
-BaseAlgorithm <|-- InsertionSort
-BaseAlgorithm <|-- SelectionSort
-BaseAlgorithm *-- ComparatorIndex
-BaseAlgorithm *-- DataVerifier
+BaseSortingAlgorithm <|-- BubbleSort
+BaseSortingAlgorithm <|-- InsertionSort
+BaseSortingAlgorithm <|-- SelectionSort
+BaseSortingAlgorithm *-- ComparatorIndex
+BaseSortingAlgorithm *-- DataVerifier
