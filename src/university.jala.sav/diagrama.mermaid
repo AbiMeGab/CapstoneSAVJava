@@ -1,61 +1,70 @@
 classDiagram
     class BaseSortingAlgorithm {
-        +List<IndiceComparador> list
-        +BaseSortingAlgorithm(list: List<IndiceComparador>)
+        +List<ComparatorIndex> list
+        +BaseSortingAlgorithm(List<ComparatorIndex> list)
         +sort(): void
     }
 
     class ComparatorIndex {
-        +int value
-        +String key
-        +ComparatorIndex(value: int, key: String)
+        -int value
+        -String key
+        +ComparatorIndex(int value, String key)
         +getValue(): int
     }
 
+    class ConsolePrinter {
+        +inverseConsolePrinter(orderingType: String, iteraciones: int, list: List<ComparatorIndex>): void
+        +sortingList(iteraciones: int, list: List<ComparatorIndex>): void
+        +printError(msg: String): void
+        +printTypeOfArray(type: String): void
+        +printSortingType(sorting: String): void
+    }
+
     class DataVerifier {
-+String algorithm
-+String type
-+String ordering
-+String entry
-+String array
-+static String printSpeed
-+int speed
-+List<ComparatorIndex> arrayListComparator
+-String algorithm
+-String type
+-String orderingType
+-String entry
+-String array
+-int speed
+-List<ComparatorIndex> arrayListComparator
 +DataVerifier(algorithm: String, type: String, order: String, entry: String, array: String, velocity: String)
-+validateAlgorithm(entrada: String, op1: String, op2: String, op3: String): String
-+validateType(entrada: String, op1: String, op2: String): String
-+validateOrder(entrada: String, op1: String, op2: String, op3: String, op4: String): String
-+validateEntry(entrada: String, op1: String, op2: String): String
-+validateSpeed(entrada: String, valorMax: int, valorMin: int): int
-+runArray(): void
-+rellenarArreglo(): void
-+getAlg(): String
-+getVerfiedArray(): List<ComparatorIndex>
++getMinValue(): ComparatorIndex
++getMaxValue(): ComparatorIndex
++getAlgorithm(): String
++getVerifiedArray(): List<ComparatorIndex>
++getSpeed(): int
 }
 
+class RandomGenerator {
++randomCharacters(): List<ComparatorIndex>
++randomNumbers(): List<ComparatorIndex>
+    }
+
 class BubbleSort {
-+String ord
-+String speed
-+BubbleSort(list: List<ComparatorIndex>, ord: String, speed: String)
+-String orderingType
+-String speed
++BubbleSort(list: List<ComparatorIndex>, orderingType: String, speed: String)
 +sort(): void
 }
 
 class InsertionSort {
-+String ord
-+String speed
-+InsertionSort(list: List<ComparatorIndex>, ord: String, speed: String)
+-String orderingType
+-String speed
++InsertionSort(list: List<ComparatorIndex>, orderingType: String, speed: String)
 +sort(): void
 }
 
 class SelectionSort {
-+String speed
-+String ord
-+SelectionSort(list: List<ComparatorIndex>, ord: String, speed: String)
+-String orderingType
+-String speed
++SelectionSort(list: List<ComparatorIndex>, orderingType: String, speed: String)
 +sort(): void
 }
 
-BaseSortingAlgorithm <|-- BubbleSort
-BaseSortingAlgorithm <|-- InsertionSort
-BaseSortingAlgorithm <|-- SelectionSort
-BaseSortingAlgorithm *-- ComparatorIndex
-BaseSortingAlgorithm *-- DataVerifier
+BaseSortingAlgorithm --|> ComparatorIndex
+BubbleSort --|> BaseSortingAlgorithm
+InsertionSort --|> BaseSortingAlgorithm
+SelectionSort --|> BaseSortingAlgorithm
+DataVerifier --|> ConsolePrinter
+DataVerifier --|> RandomGenerator

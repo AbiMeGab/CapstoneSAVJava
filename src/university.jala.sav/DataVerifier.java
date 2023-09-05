@@ -106,7 +106,7 @@ public class DataVerifier<T> {
             String[] temp = this.array.split(",");
             for (int index = 0; index < temp.length; index++) {
                 String trimmedElement = temp[index].trim().replace("\"", ""); // Eliminar comillas del arreglo de entrada
-                if (this.type.equals("n") || (this.type.equals("n") && this.type.isBlank())) {
+                if (this.type.equals("n")) {
                     try {
                         int value = Integer.parseInt(trimmedElement);
                         ComparatorIndex comparatorIndexNumeros = new ComparatorIndex(value, trimmedElement);
@@ -118,7 +118,7 @@ public class DataVerifier<T> {
                         System.out.println("Valores invalidos.");
                         System.exit(0);
                     }
-                } else if (this.type.equals("c") || ((this.type.equals("c") && this.type.isBlank()))) {
+                } else if (this.type.equals("c")) {
                     try {
                         int value = characters.indexOf(trimmedElement);
                         if (value == -1) {
@@ -150,36 +150,12 @@ public class DataVerifier<T> {
         System.out.println("Valores: " + "[" + array + "]");
     }
 
-    public ComparatorIndex getMinValue() {
-        ComparatorIndex minValue = arrayListComparator.get(0);
-        for (int index = 1; index < arrayListComparator.size(); index++) {
-            if (arrayListComparator.get(index).getValue() < minValue.getValue()) {
-                minValue = arrayListComparator.get(index);
-            }
-        }
-        return minValue;
-    }
-
-    public ComparatorIndex getMaxValue() {
-        ComparatorIndex maxValue = arrayListComparator.get(0);
-        for (int index = 1; index < arrayListComparator.size(); index++) {
-            if (arrayListComparator.get(index).getValue() > maxValue.getValue()) {
-                maxValue = arrayListComparator.get(index);
-            }
-        }
-        return maxValue;
-    }
-
     public String getAlgorithm() {
         return algorithm;
     }
 
     public List<ComparatorIndex> getVerifiedArray() {
         return arrayListComparator;
-    }
-
-    public int getSpeed() {
-        return speed;
     }
 
     @Override

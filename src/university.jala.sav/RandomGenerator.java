@@ -35,11 +35,11 @@ public class RandomGenerator {
     public static List<ComparatorIndex> randomNumbers() {
         System.out.println("Tipo: [Numerico]");
 
-        final int sizeR = (int) (Math.random() * 40) + 1;
+        final int sizeRandomArray = (int) (Math.random() * 40) + 1;
 
         List<ComparatorIndex> list = new ArrayList<>();
 
-        for (int index = 0; index < sizeR; index++) {
+        for (int index = 0; index < sizeRandomArray; index++) {
             int randomValue = (int) (Math.random() * (MAX_NUM - MIN_NUM + 1)) + MIN_NUM;
             String key = String.valueOf(randomValue);
             ComparatorIndex comparatorIndex = new ComparatorIndex(randomValue, key);
